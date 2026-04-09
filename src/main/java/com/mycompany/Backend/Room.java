@@ -1,10 +1,10 @@
 package com.mycompany.Backend;
 
 public class Room {
-    private String number;   // e.g., "101", "A-203"
-    private String type;     // e.g., "Single", "Double", "Suite"
-    private double price;    // nightly rate
-    private String status;   // "Available", "Booked", "Maintenance"
+    private String number;   
+    private String type;     
+    private double price;    
+    private String status;   
 
     public Room(String number, String type, double price, String status) {
         this.number = number;

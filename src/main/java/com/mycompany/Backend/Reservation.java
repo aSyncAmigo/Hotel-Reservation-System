@@ -3,9 +3,9 @@ package com.mycompany.Backend;
 import java.time.LocalDate;
 
 public class Reservation {
-    private String reservationId;   // unique identifier
-    private String guestId;         // guest identifier
-    private String roomNumber;      // room number (String)
+    private String reservationId;  
+    private String guestId;         
+    private String roomNumber;     
     private LocalDate checkIn;
     private LocalDate checkOut;
 

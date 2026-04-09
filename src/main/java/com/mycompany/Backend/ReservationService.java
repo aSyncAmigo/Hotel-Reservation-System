@@ -8,7 +8,6 @@ public class ReservationService {
     private static final String FILE = "reservations.txt";
     private final RoomService roomService = new RoomService();
 
-    // Add reservation
     public void addReservation(Reservation r) {
         Room room = roomService.getRoomByNumber(r.getRoomNumber());
         if (room == null) {
@@ -29,7 +28,7 @@ public class ReservationService {
         roomService.updateRoomStatus(r.getRoomNumber(), "Booked");
     }
 
-    // Get all reservations
+   
     public List<Reservation> getAllReservations() {
         List<Reservation> reservations = new ArrayList<>();
         try (BufferedReader br = new BufferedReader(new FileReader(FILE))) {
@@ -52,7 +51,7 @@ public class ReservationService {
         return reservations;
     }
 
-    // Delete reservation by ID
+    
     public void deleteReservation(String reservationId) {
         List<Reservation> reservations = getAllReservations();
         Reservation target = null;

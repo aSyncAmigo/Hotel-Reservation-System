@@ -6,7 +6,7 @@ import java.util.*;
 public class RoomService {
     private static final String FILE = "rooms.txt";
 
-    // Add a new room
+   
     public void addRoom(Room r) {
         try (PrintWriter pw = new PrintWriter(new FileWriter(FILE, true))) {
             pw.println(r.getNumber() + "|" + r.getType() + "|" + r.getPrice() + "|" + r.getStatus());
@@ -15,7 +15,7 @@ public class RoomService {
         }
     }
 
-    // Get all rooms
+ 
     public List<Room> getAllRooms() {
         List<Room> rooms = new ArrayList<>();
         try (BufferedReader br = new BufferedReader(new FileReader(FILE))) {
@@ -42,7 +42,7 @@ public class RoomService {
         return rooms;
     }
 
-    // Delete a room by number
+   
     public void deleteRoom(String number) {
         List<Room> rooms = getAllRooms();
         try (PrintWriter pw = new PrintWriter(new FileWriter(FILE))) {
@@ -56,7 +56,7 @@ public class RoomService {
         }
     }
 
-    // Update room status (availability)
+    
     public void updateRoomStatus(String number, String newStatus) {
         List<Room> rooms = getAllRooms();
         try (PrintWriter pw = new PrintWriter(new FileWriter(FILE))) {
@@ -71,7 +71,7 @@ public class RoomService {
         }
     }
 
-    // Find a room by number
+  
     public Room getRoomByNumber(String number) {
         for (Room r : getAllRooms()) {
             if (r.getNumber().equals(number)) {

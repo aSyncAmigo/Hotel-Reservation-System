@@ -7,14 +7,13 @@ import java.util.*;
 public class PaymentService {
     private static final String FILE = "payments.txt";
 
-    // Add a payment
     public void addPayment(Payment p) {
         String record = p.getId() + "|" + p.getReservationId() + "|" +
                         p.getAmount() + "|" + p.getMethod() + "|" + p.getDate();
         FileHandler.writeLine(FILE, record);
     }
 
-    // Get all payments
+  
     public List<Payment> getAllPayments() {
         List<Payment> payments = new ArrayList<>();
         List<String> lines = FileHandler.readAll(FILE);
@@ -39,7 +38,7 @@ public class PaymentService {
         return payments;
     }
 
-    // Delete a payment
+    
     public void deletePayment(int id) {
         List<String> lines = FileHandler.readAll(FILE);
         List<String> newLines = new ArrayList<>();

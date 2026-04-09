@@ -5,7 +5,7 @@ public class Guest {
     private String phone;
     private String email;
 
-    // Constructor
+    
     public Guest(int id, String name, String phone, String email) {
         this.id = id;
         this.name = name;
@@ -13,7 +13,7 @@ public class Guest {
         this.email = email;
     }
 
-    // Getters
+ 
     public int getId() {
         return id;
     }
@@ -30,7 +30,6 @@ public class Guest {
         return email;
     }
 
-    // Setters
     public void setId(int id) {
         this.id = id;
     }
@@ -47,7 +46,7 @@ public class Guest {
         this.email = email;
     }
 
-    // toString for easy printing
+    
     @Override
     public String toString() {
         return "Guest [ID=" + id + ", Name=" + name + ", Phone=" + phone + ", Email=" + email + "]";

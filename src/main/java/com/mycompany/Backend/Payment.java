@@ -4,12 +4,12 @@ import java.time.LocalDate;
 
 public class Payment {
     private int id;
-    private int reservationId;   // Link to Reservation
+    private int reservationId;   
     private double amount;
-    private String method;       // e.g., "Cash", "Card", "UPI"
+    private String method;       
     private LocalDate date;
 
-    // Constructor
+    
     public Payment(int id, int reservationId, double amount, String method, LocalDate date) {
         this.id = id;
         this.reservationId = reservationId;
@@ -18,7 +18,7 @@ public class Payment {
         this.date = date;
     }
 
-    // Getters & Setters
+   
     public int getId() { return id; }
     public int getReservationId() { return reservationId; }
     public double getAmount() { return amount; }
